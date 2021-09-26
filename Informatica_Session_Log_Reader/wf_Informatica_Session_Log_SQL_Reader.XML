@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE POWERMART SYSTEM "powrmart.dtd">
+<POWERMART CREATION_DATE="02/05/2019 11:32:29" REPOSITORY_VERSION="187.96">
+<REPOSITORY NAME="INFA_REPO_D3" VERSION="187" CODEPAGE="Latin1" DATABASETYPE="Oracle">
+<FOLDER NAME="INTF_CLAIMS" GROUP="" OWNER="Administrator" SHARED="NOTSHARED" DESCRIPTION="" PERMISSIONS="rwx---r--" UUID="7936fcc8-c14a-4d59-9a14-ed561baa8964">
+    <SOURCE BUSINESSNAME ="" CRCVALUE ="1044733711" DATABASETYPE ="XML" DBDNAME ="XML_File" DESCRIPTION ="" NAME ="Informatica_Session_Log_XSD" OBJECTVERSION ="1" OWNERNAME ="" VERSIONNUMBER ="3">
+        <FLATFILE CODEPAGE ="Latin1" CONSECDELIMITERSASONE ="NO" DELIMITED ="NO" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+        <XMLINFO>
+            <XMLTEXT TEXT ="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xA;&lt;METASCHEMA ORIGIN=&quot;xml,reposit&quot; version=&quot;7.01&quot;&gt;&#xA;&lt;NAMESPACEINFO NAMESPACE=&quot;&quot; PREFIX=&quot;&quot; ELEMENT-FORM-DEFAULT=&quot;unqualified&quot; ATTRIBUTE-FORM-DEFAULT=&quot;unqualified&quot; ROOTNAMESPACE=&quot;true&quot;&gt;&#xA;&lt;/NAMESPACEINFO&gt;&#xA;&lt;/METASCHEMA&gt;&#xA;" TYPE ="ADAPTER"/>
+            <XMLTEXT TEXT ="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xA;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:infatype=&quot;http://www.informatica.com/types/&quot; elementFormDefault=&quot;unqualified&quot; attributeFormDefault=&quot;unqualified&quot;&gt;&#xA;&lt;xsd:element name=&quot;LogEvent&quot;&gt;&#xA;&lt;xsd:complexType mixed=&quot;true&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;1&quot;&gt;&#xA;&lt;xsd:sequence&gt;&#xA;&lt;/xsd:sequence&gt;&#xA;&lt;xsd:attribute ref=&quot;clientNode&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;context&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;message&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;messageCode&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;objVersion&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;pid&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;service&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;serviceType&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;severity&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;stacktrace&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;threadName&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;timestamp&quot;/&gt;&#xA;&lt;xsd:attribute ref=&quot;user&quot;/&gt;&#xA;&lt;/xsd:complexType&gt;&#xA;&lt;/xsd:element&gt;&#xA;&#xA;&lt;xsd:element name=&quot;log&quot;&gt;&#xA;&lt;xsd:complexType&gt;&#xA;&lt;xsd:sequence&gt;&#xA;&lt;xsd:element ref=&quot;LogEvent&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;/&gt;&#xA;&lt;/xsd:sequence&gt;&#xA;&lt;/xsd:complexType&gt;&#xA;&lt;/xsd:element&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;severity&quot; type=&quot;xsd:integer&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;pid&quot; type=&quot;xsd:integer&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;clientNode&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;28&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;serviceType&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;16&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;threadName&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;19&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;context&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;12&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;service&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;24&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;message&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;93985&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;stacktrace&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;12&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;user&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;11&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;objVersion&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;11&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;messageCode&quot; type=&quot;xsd:string&quot; infatype:type=&quot;xsd:string&quot; infatype:length=&quot;14&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;xsd:attribute name=&quot;timestamp&quot; type=&quot;xsd:integer&quot;&gt;&#xA;&lt;/xsd:attribute&gt;&#xA;&#xA;&lt;/xsd:schema&gt;&#xA;" TYPE ="SCHEMA"/>
+            <XMLTEXT TEXT ="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xA;&lt;METATABLE version=&quot;7.01&quot;&gt;&#xA;&lt;GROUP GROUPNAME=&quot;X_LogEvent&quot;&gt;&#xA;&lt;GROUPSAT&gt;log/LogEvent&lt;/GROUPSAT&gt;&#xA;&lt;/GROUP&gt;&#xA;&lt;/METATABLE&gt;&#xA;" TYPE ="TABLE"/>
+        </XMLINFO>
+        <GROUP DESCRIPTION ="" NAME ="X_LogEvent" ORDER ="1" TYPE ="OUTPUT"/>
+        <TABLEATTRIBUTE NAME ="Base Table Name" VALUE =""/>
+        <TABLEATTRIBUTE NAME ="Search Specification" VALUE =""/>
+        <TABLEATTRIBUTE NAME ="Sort Specification" VALUE =""/>
+        <TABLEATTRIBUTE NAME ="Add Currently Processed XML File Name Port" VALUE ="YES"/>
+        <TABLEATTRIBUTE NAME ="Source TimeStamp" VALUE =""/>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="integer" DESCRIPTION ="" FIELDNUMBER ="1" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="PRIMARY/GENERATED KEY" LENGTH ="20" LEVEL ="0" NAME ="XPK_LogEvent" NULLABLE ="NOTNULL" OCCURS ="0" OFFSET ="0" PHYSICALLENGTH ="19" PHYSICALOFFSET ="0" PICTURETEXT ="" PRECISION ="19" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =""/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:integer)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="2" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="1" LEVEL ="0" NAME ="LogEvent" NULLABLE ="NULL" OCCURS ="0" OFFSET ="20" PHYSICALLENGTH ="1" PHYSICALOFFSET ="19" PICTURETEXT ="" PRECISION ="1" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE ="."/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="3" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="28" LEVEL ="0" NAME ="clientNode" NULLABLE ="NULL" OCCURS ="0" OFFSET ="21" PHYSICALLENGTH ="28" PHYSICALOFFSET ="20" PICTURETEXT ="" PRECISION ="28" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@clientNode/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="4" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="12" LEVEL ="0" NAME ="context" NULLABLE ="NULL" OCCURS ="0" OFFSET ="49" PHYSICALLENGTH ="12" PHYSICALOFFSET ="48" PICTURETEXT ="" PRECISION ="12" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@context/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="5" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="93985" LEVEL ="0" NAME ="message" NULLABLE ="NULL" OCCURS ="0" OFFSET ="61" PHYSICALLENGTH ="93985" PHYSICALOFFSET ="60" PICTURETEXT ="" PRECISION ="93985" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@message/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="6" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="14" LEVEL ="0" NAME ="messageCode" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94046" PHYSICALLENGTH ="14" PHYSICALOFFSET ="94045" PICTURETEXT ="" PRECISION ="14" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@messageCode/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="7" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="11" LEVEL ="0" NAME ="objVersion" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94060" PHYSICALLENGTH ="11" PHYSICALOFFSET ="94059" PICTURETEXT ="" PRECISION ="11" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@objVersion/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="integer" DESCRIPTION ="" FIELDNUMBER ="8" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="20" LEVEL ="0" NAME ="pid" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94071" PHYSICALLENGTH ="19" PHYSICALOFFSET ="94070" PICTURETEXT ="" PRECISION ="19" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@pid/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:integer)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="9" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="24" LEVEL ="0" NAME ="service" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94091" PHYSICALLENGTH ="24" PHYSICALOFFSET ="94089" PICTURETEXT ="" PRECISION ="24" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@service/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="10" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="16" LEVEL ="0" NAME ="serviceType" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94115" PHYSICALLENGTH ="16" PHYSICALOFFSET ="94113" PICTURETEXT ="" PRECISION ="16" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@serviceType/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="integer" DESCRIPTION ="" FIELDNUMBER ="11" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="20" LEVEL ="0" NAME ="severity" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94131" PHYSICALLENGTH ="19" PHYSICALOFFSET ="94129" PICTURETEXT ="" PRECISION ="19" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@severity/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:integer)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="12" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="12" LEVEL ="0" NAME ="stacktrace" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94151" PHYSICALLENGTH ="12" PHYSICALOFFSET ="94148" PICTURETEXT ="" PRECISION ="12" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@stacktrace/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="13" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="19" LEVEL ="0" NAME ="threadName" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94163" PHYSICALLENGTH ="19" PHYSICALOFFSET ="94160" PICTURETEXT ="" PRECISION ="19" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@threadName/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="integer" DESCRIPTION ="" FIELDNUMBER ="14" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="20" LEVEL ="0" NAME ="timestamp" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94182" PHYSICALLENGTH ="19" PHYSICALOFFSET ="94179" PICTURETEXT ="" PRECISION ="19" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@timestamp/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:integer)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="15" FIELDPROPERTY ="0" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="11" LEVEL ="0" NAME ="user" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94202" PHYSICALLENGTH ="11" PHYSICALOFFSET ="94198" PICTURETEXT ="" PRECISION ="11" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =./@user/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE ="simpleType(xsd:string)"/>
+        </SOURCEFIELD>
+        <SOURCEFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="16" FIELDPROPERTY ="4096" FIELDTYPE ="ELEMITEM" GROUP ="X_LogEvent" HIDDEN ="NO" KEYTYPE ="NOT A KEY" LENGTH ="256" LEVEL ="0" NAME ="CurrentlyProcessedFileName" NULLABLE ="NULL" OCCURS ="0" OFFSET ="94213" PHYSICALLENGTH ="256" PHYSICALOFFSET ="94209" PICTURETEXT ="" PRECISION ="256" SCALE ="0" USAGE_FLAGS ="">
+            <FIELDATTRIBUTE NAME ="XML Mapping" VALUE =""/>
+            <FIELDATTRIBUTE NAME ="IsElement" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="PivotNumber" VALUE ="0"/>
+            <FIELDATTRIBUTE NAME ="XSDDatatype" VALUE =""/>
+        </SOURCEFIELD>
+    </SOURCE>
+    <TARGET BUSINESSNAME ="" CONSTRAINT ="" DATABASETYPE ="Flat File" DESCRIPTION ="" NAME ="Session_Statistics" OBJECTVERSION ="1" TABLEOPTIONS ="" VERSIONNUMBER ="3">
+        <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="1" KEYTYPE ="NOT A KEY" NAME ="Table_Name" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="2" KEYTYPE ="NOT A KEY" NAME ="Infa_Instance_Name" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="3" KEYTYPE ="NOT A KEY" NAME ="Output_Rows" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="4" KEYTYPE ="NOT A KEY" NAME ="Affected_Rows" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="5" KEYTYPE ="NOT A KEY" NAME ="Applied_Rows" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="6" KEYTYPE ="NOT A KEY" NAME ="Rejected_Rows" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="256" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="7" ISFILENAMEFIELD ="YES" KEYTYPE ="NOT A KEY" NAME ="FileName" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="255" SCALE ="0"/>
+        <TABLEATTRIBUTE NAME ="Datetime Format" VALUE ="A  19 mm/dd/yyyy hh24:mi:ss"/>
+        <TABLEATTRIBUTE NAME ="Thousand Separator" VALUE ="None"/>
+        <TABLEATTRIBUTE NAME ="Decimal Separator" VALUE ="."/>
+        <TABLEATTRIBUTE NAME ="Line Endings" VALUE ="System default"/>
+    </TARGET>
+    <TARGET BUSINESSNAME ="" CONSTRAINT ="" DATABASETYPE ="Flat File" DESCRIPTION ="" NAME ="TGT_INFORMATICA_SESSON_LOG_DATA" OBJECTVERSION ="1" TABLEOPTIONS ="" VERSIONNUMBER ="3">
+        <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="1" KEYTYPE ="NOT A KEY" NAME ="TEXT" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="250000" SCALE ="0"/>
+        <TARGETFIELD BUSINESSNAME ="" DATATYPE ="string" DESCRIPTION ="" FIELDNUMBER ="2" ISFILENAMEFIELD ="YES" KEYTYPE ="NOT A KEY" NAME ="FileName" NULLABLE ="NULL" PICTURETEXT ="" PRECISION ="255" SCALE ="0"/>
+        <TABLEATTRIBUTE NAME ="Datetime Format" VALUE ="A  19 mm/dd/yyyy hh24:mi:ss"/>
+        <TABLEATTRIBUTE NAME ="Thousand Separator" VALUE ="None"/>
+        <TABLEATTRIBUTE NAME ="Decimal Separator" VALUE ="."/>
+        <TABLEATTRIBUTE NAME ="Line Endings" VALUE ="System default"/>
+    </TARGET>
+    <MAPPING DESCRIPTION ="Created By: CTS&#xD;&#xA;on July 5th 2017&#xD;&#xA;&#xD;&#xA;This mapping will read the log file in xml format and  will generate the Target File with SQL Queries used in the paricular Session" ISVALID ="YES" NAME ="m_Informatica_Session_Log_SQL_Reader" OBJECTVERSION ="1" VERSIONNUMBER ="6">
+        <TRANSFORMATION DESCRIPTION ="Using Sorter Transformation to sort the data based on Timestamp generated by Session log file" NAME ="srt_Informatica_Session_Log_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Sorter" VERSIONNUMBER ="4">
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" ISSORTKEY ="YES" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" SCALE ="0" SORTDIRECTION ="ASCENDING"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" ISSORTKEY ="YES" NAME ="timestamp" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" SCALE ="0" SORTDIRECTION ="ASCENDING"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" ISSORTKEY ="NO" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="93985" SCALE ="0" SORTDIRECTION ="ASCENDING"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" ISSORTKEY ="NO" NAME ="severity" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" SCALE ="0" SORTDIRECTION ="ASCENDING"/>
+            <TABLEATTRIBUTE NAME ="Sorter Cache Size" VALUE ="Auto"/>
+            <TABLEATTRIBUTE NAME ="Case Sensitive" VALUE ="YES"/>
+            <TABLEATTRIBUTE NAME ="Work Directory" VALUE ="$PMTempDir"/>
+            <TABLEATTRIBUTE NAME ="Distinct" VALUE ="NO"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+            <TABLEATTRIBUTE NAME ="Null Treated Low" VALUE ="NO"/>
+            <TABLEATTRIBUTE NAME ="Merge Only" VALUE ="NO"/>
+            <TABLEATTRIBUTE NAME ="Partitioning" VALUE ="Order records for individual partitions"/>
+            <TABLEATTRIBUTE NAME ="Transformation Scope" VALUE ="All Input"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="Using Transaction Control transformation to generate the files based on file names" NAME ="trns_Informatica_Session_Log_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Transaction Control" VERSIONNUMBER ="3">
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="O_message" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="O_File_Name" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="File_Change_Flag" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="10" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Transaction Control Condition" VALUE ="IIF(File_Change_Flag =&apos;N&apos;, TC_COMMIT_BEFORE, TC_CONTINUE_TRANSACTION)"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="Using Transaction Control transformation to generate the files based on file names" NAME ="trns_Informatica_Session_Log_Stats_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Transaction Control" VERSIONNUMBER ="3">
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="O_File_Name" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="File_Change_Flag" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="10" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Table_Name" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Infa_Instance_Name" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Output_Rows" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Affected_Rows" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Applied_Rows" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="o_Rejected_Rows" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Transaction Control Condition" VALUE ="IIF(File_Change_Flag =&apos;N&apos;, TC_COMMIT_BEFORE, TC_CONTINUE_TRANSACTION)"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="Using Expression Transformation to Clenup the message column to get the particular SQL Query." NAME ="exp_Informatica_Session_Log_Stats_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Expression" VERSIONNUMBER ="3">
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;instr(message,&apos;Table:&apos;)&gt;0 AND instr(message,&apos;view name&apos;)=0, &apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;instr(message,&apos;The index cache size that would hold [&apos;)&gt;0,&apos;Cache_Rows_Check_Y&apos;,&#xD;&#xA;instr(message,&apos;Table:&apos;)&gt;0 AND instr(message,&apos;view name&apos;)&gt;0, &apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(substr(message,instr(message,&apos;End&apos;)),1,40)=&apos;End of output from Sorter Transformation&apos;,&apos;Srt_Stats_Check_Y&apos;&#xD;&#xA;,null&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;" EXPRESSIONTYPE ="GENERAL" NAME ="v_Row_Type_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1)||&apos;:&apos;||substr(message,instr(message,&apos;[&apos;,1,4)+1,instr(message,&apos;]&apos;,1,4)-instr(message,&apos;[&apos;,1,4)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Cache_Rows_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,2)+1,instr(message,&apos;]&apos;,1,2)-instr(message,&apos;[&apos;,1,2)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Srt_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1),&#xD;&#xA;null)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Table_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,2)+1,instr(message,&apos;]&apos;,1,2)-instr(message,&apos;[&apos;,1,2)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1)||&apos;:&apos;||substr(message,instr(message,&apos;[&apos;,1,4)+1,instr(message,&apos;]&apos;,1,4)-instr(message,&apos;[&apos;,1,4)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Cache_Rows_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,2)+1,instr(message,&apos;]&apos;,1,2)-instr(message,&apos;[&apos;,1,2)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Srt_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1),&#xD;&#xA;null)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Infa_Instance_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,3)+1,instr(message,&apos;]&apos;,1,3)-instr(message,&apos;[&apos;,1,3)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,5)+1,instr(message,&apos;]&apos;,1,5)-instr(message,&apos;[&apos;,1,5)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Cache_Rows_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1),&#xD;&#xA;v_Row_Type_Check=&apos;Srt_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos; &apos;,1,9)+1,instr(message,&apos; &apos;,1,10)-instr(message,&apos; &apos;,1,9)-1)&#xD;&#xA;,&#xD;&#xA;&apos;0&apos;&#xD;&#xA;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Output_Rows" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,4)+1,instr(message,&apos;]&apos;,1,4)-instr(message,&apos;[&apos;,1,4)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,6)+1,instr(message,&apos;]&apos;,1,6)-instr(message,&apos;[&apos;,1,6)-1)&#xD;&#xA;,&#xD;&#xA;&apos;0&apos;&#xD;&#xA;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Affected_Rows" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,5)+1,instr(message,&apos;]&apos;,1,5)-instr(message,&apos;[&apos;,1,5)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,7)+1,instr(message,&apos;]&apos;,1,7)-instr(message,&apos;[&apos;,1,7)-1)&#xD;&#xA;,&#xD;&#xA;&apos;0&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Applied_Rows" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(true,&#xD;&#xA;v_Row_Type_Check=&apos;Table_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,6)+1,instr(message,&apos;]&apos;,1,6)-instr(message,&apos;[&apos;,1,6)-1),&#xD;&#xA;v_Row_Type_Check=&apos;XML_Stats_Check_Y&apos;,&#xD;&#xA;substr(message,instr(message,&apos;[&apos;,1,8)+1,instr(message,&apos;]&apos;,1,8)-instr(message,&apos;[&apos;,1,8)-1)&#xD;&#xA;,&#xD;&#xA;&apos;0&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Rejected_Rows" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Table_Name" EXPRESSIONTYPE ="GENERAL" NAME ="o_Table_Name" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Infa_Instance_Name" EXPRESSIONTYPE ="GENERAL" NAME ="o_Infa_Instance_Name" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Output_Rows" EXPRESSIONTYPE ="GENERAL" NAME ="o_Output_Rows" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Affected_Rows" EXPRESSIONTYPE ="GENERAL" NAME ="o_Affected_Rows" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Applied_Rows" EXPRESSIONTYPE ="GENERAL" NAME ="o_Applied_Rows" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Rejected_Rows" EXPRESSIONTYPE ="GENERAL" NAME ="o_Rejected_Rows" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="255" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="substr(CurrentlyProcessedFileName,0,instr(UPPER(CurrentlyProcessedFileName),&apos;.&apos;)-1)" EXPRESSIONTYPE ="GENERAL" NAME ="v_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="v_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="v_Current_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(v_Final_File_Name=v_Prev_File_Name,&apos;Y&apos;,&apos;N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Final_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="v_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="v_Prev_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="ltrim(rtrim(v_File_Name))||&apos;_stats.csv&apos;" EXPRESSIONTYPE ="GENERAL" NAME ="O_File_Name" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Final_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="File_Change_Flag" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="10" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="" NAME ="XMLDSQ_Informatica_Session_Log_XSD" OBJECTVERSION ="1" REF_DBD_NAME ="XML_File" REF_SOURCE_NAME ="Informatica_Session_Log_XSD" REUSABLE ="NO" TYPE ="XML Source Qualifier" VERSIONNUMBER ="3">
+            <GROUP DESCRIPTION ="" NAME ="X_LogEvent" ORDER ="1" TYPE ="INPUT/OUTPUT"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="140146" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="XPK_LogEvent" PICTURETEXT ="" PORTTYPE ="GENERATED KEY/INPUT/OUTPUT" PRECISION ="19" REF_SOURCE_FIELD ="XPK_LogEvent" SCALE ="0" SEQUENCE_GENERATOR_VALUE ="1"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="LogEvent" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="1" REF_SOURCE_FIELD ="LogEvent" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="clientNode" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="28" REF_SOURCE_FIELD ="clientNode" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="context" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="12" REF_SOURCE_FIELD ="context" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="93985" REF_SOURCE_FIELD ="message" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="messageCode" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="14" REF_SOURCE_FIELD ="messageCode" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="objVersion" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="11" REF_SOURCE_FIELD ="objVersion" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="pid" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" REF_SOURCE_FIELD ="pid" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="service" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="24" REF_SOURCE_FIELD ="service" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="serviceType" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="16" REF_SOURCE_FIELD ="serviceType" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="severity" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" REF_SOURCE_FIELD ="severity" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="stacktrace" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="12" REF_SOURCE_FIELD ="stacktrace" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="threadName" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" REF_SOURCE_FIELD ="threadName" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="timestamp" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" REF_SOURCE_FIELD ="timestamp" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="user" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="11" REF_SOURCE_FIELD ="user" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" GROUP ="X_LogEvent" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" REF_SOURCE_FIELD ="CurrentlyProcessedFileName" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+            <TABLEATTRIBUTE NAME ="Reset" VALUE ="NO"/>
+            <TABLEATTRIBUTE NAME ="Restart" VALUE ="NO"/>
+            <TABLEATTRIBUTE NAME ="Validate XML Source" VALUE ="Validate only if DTD/Schema is present"/>
+            <TABLEATTRIBUTE NAME ="Is Partitionable" VALUE ="NO"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="" NAME ="flt_Informatica_Session_Log_Stats_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Filter" VERSIONNUMBER ="3">
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="93985" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Filter Condition" VALUE ="(instr(message,&apos;The index cache size that would hold [&apos;)&gt;0) OR (substr(message,1,6)=&apos;Table:&apos;) OR substr(substr(message,instr(message,&apos;End&apos;)),1,40)=&apos;End of output from Sorter Transformation&apos;"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="Filter transformation to filter the data based on message code. As of now we are using the below filter condition to filter the data.&#xD;&#xA;&#xD;&#xA;1.Lookup  transformation&#xD;&#xA;2.SQ Instance&#xD;&#xA;3. Mapping Name&#xD;&#xA;4. Pre- SQL&#xD;&#xA;5. Post SQL&#xD;&#xA;6.SQL Transformation" NAME ="flt_Informatica_Session_Log_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Filter" VERSIONNUMBER ="5">
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="timestamp" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="severity" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Filter Condition" VALUE ="(upper(substr(message,0,21))=&apos;LOOKUP TRANSFORMATION&apos;) OR (upper(substr(message,0,11))=&apos;SQ INSTANCE&apos;) OR (upper(substr(message,0,13))=&apos;MAPPING NAME:&apos;) OR (substr(message,0,25)=&apos;Executing pre-session SQL&apos;) OR (substr(message,0,26)=&apos;Executing post-session SQL&apos;)  OR (instr(message,&apos;Pre SQL&apos;)&gt;0 and instr(message,&apos;Starting&apos;)&gt;0) OR (instr(message,&apos;Post SQL&apos;)&gt;0 and instr(message,&apos;Starting&apos;)&gt;0) OR (instr(message,&apos;[Pre/Post Session Command] Started&apos;)&gt;0) OR (severity=1) OR instr(message,&apos;Initializing session [&apos;)&gt;0 OR instr(message,&apos;Repository Name:&apos;)&gt;0 OR instr(message,&apos;Folder:&apos;)&gt;0 OR instr(message,&apos;SQL UPDATE override statement:&apos;)&gt;0  OR (instr(message,&apos;End loading table [&apos;)&gt;0 OR (instr(message,&apos;Starting shell command&apos;)&gt;0 and instr(message,&apos;[Pre/Post Session Command]&apos;)=0) OR (instr(message,&apos;The last SQL query to run was:&apos;)&gt;0))"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <TRANSFORMATION DESCRIPTION ="Using Expression Transformation to Clenup the message column to get the particular SQL Query." NAME ="exp_Informatica_Session_Log_Reader" OBJECTVERSION ="1" REUSABLE ="NO" TYPE ="Expression" VERSIONNUMBER ="5">
+            <TRANSFORMFIELD DATATYPE ="bigint" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="severity" EXPRESSIONTYPE ="GENERAL" NAME ="severity" PICTURETEXT ="" PORTTYPE ="INPUT/OUTPUT" PRECISION ="19" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="message" PICTURETEXT ="" PORTTYPE ="INPUT" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="iif(instr(message,&apos;Initializing session [&apos;)&gt;0,&apos;RUN_DEATILS_Y&apos;,&apos;RUN_DETAILS_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Session_run_Details_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;Repository Name:&apos;)&gt;0 OR instr(message,&apos;Folder:&apos;)&gt;0,&apos;REPO_DEATILS_Y&apos;,&apos;REPO_DETAILS_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Repository_Details_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;End loading table [&apos;)&gt;0,&apos;END_LOAD_Y&apos;,&apos;END_LOAD_N&apos;)&#xD;&#xA;" EXPRESSIONTYPE ="GENERAL" NAME ="v_End_Loading" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;Starting shell command&apos;)&gt;0,&apos;FILE_CMD_Y&apos;,&apos;FILE_CMD_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_File_Commands" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF( (upper(substr(message,0,21))=&apos;LOOKUP TRANSFORMATION&apos;) OR (upper(substr(message,0,11))=&apos;SQ INSTANCE&apos;),&apos;Query_Y&apos;,&apos;Query_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Query_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(upper(substr(message,0,13))=&apos;MAPPING NAME:&apos;,&apos;Mapping_Name_Y&apos;,&apos;Mapping_Name_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Mapping_Name_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF((instr(message,&apos;Pre SQL&apos;)&gt;0) OR (instr(message,&apos;Post SQL&apos;)&gt;0) ,&apos;Pre_Post_Sql_Table_Y&apos;,&apos;Pre_Post_Sql_Table_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Pre_Post_Sql_Table_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF((substr(message,0,25)=&apos;Executing pre-session SQL&apos;) OR  (substr(message,0,26)=&apos;Executing post-session SQL&apos;) ,&apos;Pre_Post_Sql_Query_Y&apos;,&apos;Pre_Post_Sql_Query_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Pre_Post_Sql_Query_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;[Pre/Post Session Command] Started&apos;)&gt;0,&apos;Pre_Post_Sess_Cmd_Y&apos;,&apos;Pre_Post_Sess_Cmd_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Pre_Post_Session_Cmd_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;SQL UPDATE override statement:&apos;)&gt;0,&apos;Target_Override_Y&apos;,&apos;Target_Override_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Target_Override_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(instr(message,&apos;The last SQL query to run was:&apos;)&gt;0,&apos;SQL_Trans_Y&apos;,&apos;SQL_Trans_N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Pmsql_SQL_Transformation_Check" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="100" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="decode(TRUE,&#xD;&#xA;v_Session_run_Details_Check=&apos;RUN_DEATILS_Y&apos;,&#xD;&#xA;&apos;Session Name : &apos;||substr(message,instr(message,&apos;[&apos;,1,1)+1,instr(message,&apos;]&apos;,1,1)-instr(message,&apos;[&apos;,1,1)-1)||CHR(13)||CHR(10)||&apos;Run Date and Time : &apos;||substr(message,instr(message,&apos;[&apos;,3,2)+1,instr(message,&apos;]&apos;,3,2)-instr(message,&apos;[&apos;,3,2)-1),&#xD;&#xA;v_Repository_Details_Check=&apos;REPO_DEATILS_Y&apos;,&#xD;&#xA;REPLACESTR(0,REPLACESTR(0,message,&apos;]&apos;,&apos;&apos;),&apos;[&apos;,&apos;&apos;),&#xD;&#xA;v_End_Loading=&apos;END_LOAD_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||&apos;Target Table:&apos;||substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1)||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10),&#xD;&#xA;&#xD;&#xA;v_File_Commands=&apos;FILE_CMD_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||&apos;File Commands :&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;[&apos;,2)+1,instr(message,&apos;].&apos;,2)-instr(message,&apos;[&apos;,2)-1)||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10),&#xD;&#xA;&#xD;&#xA;v_Query_Check=&apos;Query_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1)||&apos;:&apos;||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||&#xD;&#xA;decode( true,&#xD;&#xA;instr(UPPER(message),&apos;SQL QUERY&apos;)&gt;0,REPLACESTR(0,substr(message,instr(UPPER(message),&apos;SQL QUERY [&apos;)+11),&apos;]&apos;,&apos;&apos;),&#xD;&#xA;instr(UPPER(message),&apos;LOOKUP TRANSFORMATION&apos;)&gt;0,REPLACESTR(0,substr(message,instr(UPPER(message),&apos;:&apos;,1,2)+2),&apos;]&apos;,&apos;&apos;)&#xD;&#xA;),&#xD;&#xA;&#xD;&#xA;v_Pmsql_SQL_Transformation_Check=&apos;SQL_Trans_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||&apos;SQL Transformation Queries:&apos;||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;:&apos;)+1,instr(message,&apos;database&apos;)-instr(message,&apos;:&apos;)-1)||CHR(13)||CHR(10) ,&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;v_Pre_Post_Sql_Table_Check=&apos;Pre_Post_Sql_Table_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||REPLACESTR(0,substr(message,instr(message,&apos;P&apos;),instr(message,&apos;]&apos;)-instr(message,&apos;P&apos;))||&apos;:&apos;,&apos;[&apos;,&apos;&apos;),&#xD;&#xA;v_Pre_Post_Sql_Query_Check=&apos;Pre_Post_Sql_Query_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;:&apos;)+2),&#xD;&#xA;v_Pre_Post_Session_Cmd_Check=&apos;Pre_Post_Sess_Cmd_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;[&apos;)+1,instr(message,&apos;]&apos;)-instr(message,&apos;[&apos;)-1)||&apos;:&apos;||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;[&apos;,2)+1,instr(message,&apos;].&apos;,2)-instr(message,&apos;[&apos;,2)-1),&#xD;&#xA;v_Target_Override_Check=&apos;Target_Override_Y&apos;,&#xD;&#xA;&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,0,instr(message,&apos;:&apos;,2,2))||CHR(13)||CHR(10)||&apos;-----------------------------------------------------------------&apos;||CHR(13)||CHR(10)||substr(message,instr(message,&apos;:&apos;,2,2)+1)||CHR(13)||CHR(10),message)" EXPRESSIONTYPE ="GENERAL" NAME ="v_message" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_message" EXPRESSIONTYPE ="GENERAL" NAME ="O_message" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="250000" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" NAME ="CurrentlyProcessedFileName" PICTURETEXT ="" PORTTYPE ="INPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="substr(CurrentlyProcessedFileName,0,instr(UPPER(CurrentlyProcessedFileName),&apos;.&apos;)-1)" EXPRESSIONTYPE ="GENERAL" NAME ="v_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="v_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="v_Current_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="IIF(v_Final_File_Name=v_Prev_File_Name,&apos;Y&apos;,&apos;N&apos;)" EXPRESSIONTYPE ="GENERAL" NAME ="v_Final_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="" EXPRESSION ="v_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="v_Prev_File_Name" PICTURETEXT ="" PORTTYPE ="LOCAL VARIABLE" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="ltrim(rtrim(v_File_Name))||&apos;.sql&apos;" EXPRESSIONTYPE ="GENERAL" NAME ="O_File_Name" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="256" SCALE ="0"/>
+            <TRANSFORMFIELD DATATYPE ="string" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" DESCRIPTION ="" EXPRESSION ="v_Final_File_Name" EXPRESSIONTYPE ="GENERAL" NAME ="File_Change_Flag" PICTURETEXT ="" PORTTYPE ="OUTPUT" PRECISION ="10" SCALE ="0"/>
+            <TABLEATTRIBUTE NAME ="Tracing Level" VALUE ="Normal"/>
+        </TRANSFORMATION>
+        <INSTANCE DESCRIPTION ="Target Dummy Flat File" NAME ="TGT_INFORMATICA_SESSON_LOG_DATA" TRANSFORMATION_NAME ="TGT_INFORMATICA_SESSON_LOG_DATA" TRANSFORMATION_TYPE ="Target Definition" TYPE ="TARGET"/>
+        <INSTANCE DESCRIPTION ="" NAME ="Session_Statistics" TRANSFORMATION_NAME ="Session_Statistics" TRANSFORMATION_TYPE ="Target Definition" TYPE ="TARGET"/>
+        <INSTANCE DESCRIPTION ="Using Sorter Transformation to sort the data based on Timestamp generated by Session log file" NAME ="srt_Informatica_Session_Log_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="srt_Informatica_Session_Log_Reader" TRANSFORMATION_TYPE ="Sorter" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="Using Transaction Control transformation to generate the files based on file names" NAME ="trns_Informatica_Session_Log_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="trns_Informatica_Session_Log_Reader" TRANSFORMATION_TYPE ="Transaction Control" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DBDNAME ="XML_File" DESCRIPTION ="" NAME ="Informatica_Session_Log_XSD" TRANSFORMATION_NAME ="Informatica_Session_Log_XSD" TRANSFORMATION_TYPE ="Source Definition" TYPE ="SOURCE"/>
+        <INSTANCE DESCRIPTION ="Using Transaction Control transformation to generate the files based on file names" NAME ="trns_Informatica_Session_Log_Stats_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="trns_Informatica_Session_Log_Stats_Reader" TRANSFORMATION_TYPE ="Transaction Control" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="Using Expression Transformation to Clenup the message column to get the particular SQL Query." NAME ="exp_Informatica_Session_Log_Stats_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="exp_Informatica_Session_Log_Stats_Reader" TRANSFORMATION_TYPE ="Expression" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="" NAME ="XMLDSQ_Informatica_Session_Log_XSD" REUSABLE ="NO" TRANSFORMATION_NAME ="XMLDSQ_Informatica_Session_Log_XSD" TRANSFORMATION_TYPE ="XML Source Qualifier" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="" NAME ="flt_Informatica_Session_Log_Stats_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="flt_Informatica_Session_Log_Stats_Reader" TRANSFORMATION_TYPE ="Filter" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="Filter transformation to filter the data based on message code. As of now we are using the below filter condition to filter the data.&#xD;&#xA;&#xD;&#xA;1.Lookup  transformation&#xD;&#xA;2.SQ Instance&#xD;&#xA;3. Mapping Name&#xD;&#xA;4. Pre- SQL&#xD;&#xA;5. Post SQL&#xD;&#xA;6.SQL Transformation" NAME ="flt_Informatica_Session_Log_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="flt_Informatica_Session_Log_Reader" TRANSFORMATION_TYPE ="Filter" TYPE ="TRANSFORMATION"/>
+        <INSTANCE DESCRIPTION ="Using Expression Transformation to Clenup the message column to get the particular SQL Query." NAME ="exp_Informatica_Session_Log_Reader" REUSABLE ="NO" TRANSFORMATION_NAME ="exp_Informatica_Session_Log_Reader" TRANSFORMATION_TYPE ="Expression" TYPE ="TRANSFORMATION"/>
+        <CONNECTOR FROMFIELD ="O_message" FROMINSTANCE ="trns_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="TEXT" TOINSTANCE ="TGT_INFORMATICA_SESSON_LOG_DATA" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="O_File_Name" FROMINSTANCE ="trns_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="FileName" TOINSTANCE ="TGT_INFORMATICA_SESSON_LOG_DATA" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="O_File_Name" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="FileName" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Infa_Instance_Name" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Infa_Instance_Name" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Affected_Rows" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Affected_Rows" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Applied_Rows" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Applied_Rows" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Rejected_Rows" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Rejected_Rows" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Output_Rows" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Output_Rows" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="o_Table_Name" FROMINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Transaction Control" TOFIELD ="Table_Name" TOINSTANCE ="Session_Statistics" TOINSTANCETYPE ="Target Definition"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="message" TOINSTANCE ="flt_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="flt_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="timestamp" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="timestamp" TOINSTANCE ="flt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="message" TOINSTANCE ="flt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="flt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="severity" FROMINSTANCE ="srt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Sorter" TOFIELD ="severity" TOINSTANCE ="flt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Filter"/>
+        <CONNECTOR FROMFIELD ="timestamp" FROMINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" FROMINSTANCETYPE ="XML Source Qualifier" TOFIELD ="timestamp" TOINSTANCE ="srt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Sorter"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" FROMINSTANCETYPE ="XML Source Qualifier" TOFIELD ="message" TOINSTANCE ="srt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Sorter"/>
+        <CONNECTOR FROMFIELD ="severity" FROMINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" FROMINSTANCETYPE ="XML Source Qualifier" TOFIELD ="severity" TOINSTANCE ="srt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Sorter"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" FROMINSTANCETYPE ="XML Source Qualifier" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="srt_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Sorter"/>
+        <CONNECTOR FROMFIELD ="O_message" FROMINSTANCE ="exp_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="O_message" TOINSTANCE ="trns_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="O_File_Name" FROMINSTANCE ="exp_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="O_File_Name" TOINSTANCE ="trns_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="File_Change_Flag" FROMINSTANCE ="exp_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="File_Change_Flag" TOINSTANCE ="trns_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="XPK_LogEvent" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="XPK_LogEvent" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="LogEvent" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="LogEvent" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="clientNode" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="clientNode" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="context" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="context" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="message" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="messageCode" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="messageCode" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="objVersion" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="objVersion" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="pid" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="pid" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="service" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="service" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="serviceType" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="serviceType" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="severity" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="severity" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="stacktrace" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="stacktrace" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="threadName" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="threadName" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="timestamp" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="timestamp" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="user" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="user" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="Informatica_Session_Log_XSD" FROMINSTANCETYPE ="Source Definition" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="XMLDSQ_Informatica_Session_Log_XSD" TOINSTANCETYPE ="XML Source Qualifier"/>
+        <CONNECTOR FROMFIELD ="o_Output_Rows" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Output_Rows" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="O_File_Name" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="O_File_Name" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="o_Infa_Instance_Name" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Infa_Instance_Name" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="o_Affected_Rows" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Affected_Rows" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="o_Applied_Rows" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Applied_Rows" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="File_Change_Flag" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="File_Change_Flag" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="o_Rejected_Rows" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Rejected_Rows" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="o_Table_Name" FROMINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Expression" TOFIELD ="o_Table_Name" TOINSTANCE ="trns_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Transaction Control"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="flt_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Filter" TOFIELD ="message" TOINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Expression"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="flt_Informatica_Session_Log_Stats_Reader" FROMINSTANCETYPE ="Filter" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="exp_Informatica_Session_Log_Stats_Reader" TOINSTANCETYPE ="Expression"/>
+        <CONNECTOR FROMFIELD ="CurrentlyProcessedFileName" FROMINSTANCE ="flt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Filter" TOFIELD ="CurrentlyProcessedFileName" TOINSTANCE ="exp_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Expression"/>
+        <CONNECTOR FROMFIELD ="severity" FROMINSTANCE ="flt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Filter" TOFIELD ="severity" TOINSTANCE ="exp_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Expression"/>
+        <CONNECTOR FROMFIELD ="message" FROMINSTANCE ="flt_Informatica_Session_Log_Reader" FROMINSTANCETYPE ="Filter" TOFIELD ="message" TOINSTANCE ="exp_Informatica_Session_Log_Reader" TOINSTANCETYPE ="Expression"/>
+        <TARGETLOADORDER ORDER ="1" TARGETINSTANCE ="TGT_INFORMATICA_SESSON_LOG_DATA"/>
+        <TARGETLOADORDER ORDER ="1" TARGETINSTANCE ="Session_Statistics"/>
+        <ERPINFO/>
+    </MAPPING>
+    <CONFIG DESCRIPTION ="Default session configuration object" ISDEFAULT ="YES" NAME ="default_session_config" VERSIONNUMBER ="51">
+        <ATTRIBUTE NAME ="Advanced" VALUE =""/>
+        <ATTRIBUTE NAME ="Constraint based load ordering" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Cache LOOKUP() function" VALUE ="YES"/>
+        <ATTRIBUTE NAME ="Default buffer block size" VALUE ="2MB"/>
+        <ATTRIBUTE NAME ="Line Sequential buffer length" VALUE ="1024"/>
+        <ATTRIBUTE NAME ="Maximum Memory Allowed For Auto Memory Attributes" VALUE ="1024MB"/>
+        <ATTRIBUTE NAME ="Maximum Percentage of Total Memory Allowed For Auto Memory Attributes" VALUE ="5"/>
+        <ATTRIBUTE NAME ="Additional Concurrent Pipelines for Lookup Cache Creation" VALUE ="Auto"/>
+        <ATTRIBUTE NAME ="Custom Properties" VALUE =""/>
+        <ATTRIBUTE NAME ="Pre-build lookup cache" VALUE ="Auto"/>
+        <ATTRIBUTE NAME ="Optimization Level" VALUE ="Medium"/>
+        <ATTRIBUTE NAME ="DateTime Format String" VALUE ="MM/DD/YYYY HH24:MI:SS"/>
+        <ATTRIBUTE NAME ="Pre 85 Timestamp Compatibility" VALUE ="YES"/>
+        <ATTRIBUTE NAME ="Log Options" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Save session log by" VALUE ="Session runs"/>
+        <ATTRIBUTE NAME ="Save session log for these runs" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Session Log File Max Size" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Session Log File Max Time Period" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Maximum Partial Session Log Files" VALUE ="1"/>
+        <ATTRIBUTE NAME ="Writer Commit Statistics Log Frequency" VALUE ="1"/>
+        <ATTRIBUTE NAME ="Writer Commit Statistics Log Interval" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Error handling" VALUE =""/>
+        <ATTRIBUTE NAME ="Stop on errors" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Override tracing" VALUE ="None"/>
+        <ATTRIBUTE NAME ="On Stored Procedure error" VALUE ="Stop"/>
+        <ATTRIBUTE NAME ="On Pre-session command task error" VALUE ="Stop"/>
+        <ATTRIBUTE NAME ="On Pre-Post SQL error" VALUE ="Stop"/>
+        <ATTRIBUTE NAME ="Enable Recovery" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Error Log Type" VALUE ="None"/>
+        <ATTRIBUTE NAME ="Error Log Table Name Prefix" VALUE =""/>
+        <ATTRIBUTE NAME ="Error Log File Name" VALUE ="PMError.log"/>
+        <ATTRIBUTE NAME ="Log Source Row Data" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Data Column Delimiter" VALUE ="|"/>
+        <ATTRIBUTE NAME ="Partitioning Options" VALUE =""/>
+        <ATTRIBUTE NAME ="Dynamic Partitioning" VALUE ="Disabled"/>
+        <ATTRIBUTE NAME ="Number of Partitions" VALUE ="1"/>
+        <ATTRIBUTE NAME ="Multiplication Factor" VALUE ="Auto"/>
+        <ATTRIBUTE NAME ="Session on Grid" VALUE =""/>
+        <ATTRIBUTE NAME ="Is Enabled" VALUE ="NO"/>
+    </CONFIG>
+    <WORKFLOW DESCRIPTION ="These workflows are created for generating SQL Files from Informatica Session logs." ISENABLED ="YES" ISRUNNABLESERVICE ="NO" ISSERVICE ="NO" ISVALID ="YES" NAME ="wf_Informatica_Session_Log_SQL_Reader" REUSABLE_SCHEDULER ="NO" SCHEDULERNAME ="Scheduler" SERVERNAME ="INFA_SAD3_IS" SERVER_DOMAINNAME ="INFA_DOMD" SUSPEND_ON_ERROR ="NO" TASKS_MUST_RUN_ON_SERVER ="NO" VERSIONNUMBER ="7">
+        <SCHEDULER DESCRIPTION ="" NAME ="Scheduler" REUSABLE ="NO" VERSIONNUMBER ="3">
+            <SCHEDULEINFO SCHEDULETYPE ="ONDEMAND"/>
+        </SCHEDULER>
+        <TASK DESCRIPTION ="" NAME ="Start" REUSABLE ="NO" TYPE ="Start" VERSIONNUMBER ="3"/>
+        <SESSION DESCRIPTION ="Session To Read SQL Queries on Session Log XML File" ISVALID ="YES" MAPPINGNAME ="m_Informatica_Session_Log_SQL_Reader" NAME ="s_m_Informatica_Session_Log_SQL_Reader_Windows" REUSABLE ="NO" SORTORDER ="Binary" VERSIONNUMBER ="5">
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="exp_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="exp_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Expression">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="srt_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="srt_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Sorter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="TGT_INFORMATICA_SESSON_LOG_DATA" STAGE ="1" TRANSFORMATIONNAME ="TGT_INFORMATICA_SESSON_LOG_DATA" TRANSFORMATIONTYPE ="Target Definition">
+                <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="flt_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="flt_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Filter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="trns_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="trns_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Transaction Control">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="0" SINSTANCENAME ="Informatica_Session_Log_XSD" STAGE ="0" TRANSFORMATIONNAME ="Informatica_Session_Log_XSD" TRANSFORMATIONTYPE ="Source Definition">
+                <FLATFILE CODEPAGE ="Latin1" CONSECDELIMITERSASONE ="NO" DELIMITED ="NO" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="XMLDSQ_Informatica_Session_Log_XSD" STAGE ="2" TRANSFORMATIONNAME ="XMLDSQ_Informatica_Session_Log_XSD" TRANSFORMATIONTYPE ="XML Source Qualifier"/>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="Session_Statistics" STAGE ="3" TRANSFORMATIONNAME ="Session_Statistics" TRANSFORMATIONTYPE ="Target Definition">
+                <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="exp_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="exp_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Expression">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="flt_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="flt_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Filter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="trns_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="trns_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Transaction Control">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <CONFIGREFERENCE REFOBJECTNAME ="default_session_config" TYPE ="Session config">
+                <ATTRIBUTE NAME ="Custom Properties" VALUE ="RemoveOutputHeaderHash=Yes;"/>
+            </CONFIGREFERENCE>
+            <SESSIONCOMPONENT REFOBJECTNAME ="pre_session_command" REUSABLE ="NO" TYPE ="Pre-session command">
+                <TASK DESCRIPTION ="" NAME ="pre_session_command" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="5">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="YES"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                    <VALUEPAIR EXECORDER ="1" NAME ="Generate_Src_File" REVERSEASSIGNMENT ="NO" VALUE ="cd $$Infa_Path &amp;&amp; dir /b /a-d *.xml&gt;Infa_Session_Log_Files.txt"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="post_session_success_command" REUSABLE ="NO" TYPE ="Post-session success command">
+                <TASK DESCRIPTION ="" NAME ="post_session_success_command" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="5">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="YES"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                    <VALUEPAIR EXECORDER ="1" NAME ="Rename XML Files" REVERSEASSIGNMENT ="NO" VALUE ="cd $$Infa_Path &amp;&amp; del *.txt *.out *.bad &amp;&amp; ren *.xml *.xml_done"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="presession_variable_assignment" REUSABLE ="NO" TYPE ="Pre-session variable assignment">
+                <TASK DESCRIPTION ="" NAME ="presession_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="5">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="postsession_success_variable_assignment" REUSABLE ="NO" TYPE ="Post-session success variable assignment">
+                <TASK DESCRIPTION ="" NAME ="postsession_success_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="5">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="postsession_failure_variable_assignment" REUSABLE ="NO" TYPE ="Post-session failure variable assignment">
+                <TASK DESCRIPTION ="" NAME ="postsession_failure_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="5">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONEXTENSION NAME ="File Writer" SINSTANCENAME ="TGT_INFORMATICA_SESSON_LOG_DATA" SUBTYPE ="File Writer" TRANSFORMATIONTYPE ="Target Definition" TYPE ="WRITER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Merge Type" VALUE ="No Merge"/>
+                <ATTRIBUTE NAME ="Merge File Directory" VALUE ="$PMTargetFileDir&#x5c;"/>
+                <ATTRIBUTE NAME ="Merge File Name" VALUE ="tgt_informatica_sesson_log_data1.out"/>
+                <ATTRIBUTE NAME ="Append if Exists" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Create Target Directory" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Header Options" VALUE ="No Header"/>
+                <ATTRIBUTE NAME ="Header Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Footer Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output Type" VALUE ="File"/>
+                <ATTRIBUTE NAME ="Merge Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Output filename" VALUE ="tgt_informatica_sesson_log_data.out"/>
+                <ATTRIBUTE NAME ="Reject file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Reject filename" VALUE ="tgt_informatica_sesson_log_data.bad"/>
+                <ATTRIBUTE NAME ="Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Codepage Parameter" VALUE =""/>
+            </SESSIONEXTENSION>
+            <SESSIONEXTENSION DSQINSTNAME ="XMLDSQ_Informatica_Session_Log_XSD" DSQINSTTYPE ="XML Source Qualifier" NAME ="XML Reader" SINSTANCENAME ="Informatica_Session_Log_XSD" SUBTYPE ="XML Reader" TRANSFORMATIONTYPE ="Source Definition" TYPE ="READER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Treat empty content as NULL" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Source file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Source filename" VALUE ="Infa_Session_Log_Files.txt"/>
+                <ATTRIBUTE NAME ="Source filetype" VALUE ="Indirect"/>
+            </SESSIONEXTENSION>
+            <SESSIONEXTENSION NAME ="XML Reader" SINSTANCENAME ="XMLDSQ_Informatica_Session_Log_XSD" SUBTYPE ="XML Reader" TRANSFORMATIONTYPE ="XML Source Qualifier" TYPE ="READER"/>
+            <SESSIONEXTENSION NAME ="File Writer" SINSTANCENAME ="Session_Statistics" SUBTYPE ="File Writer" TRANSFORMATIONTYPE ="Target Definition" TYPE ="WRITER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Merge Type" VALUE ="No Merge"/>
+                <ATTRIBUTE NAME ="Merge File Directory" VALUE ="$PMTargetFileDir&#x5c;"/>
+                <ATTRIBUTE NAME ="Merge File Name" VALUE ="session_statistics.out"/>
+                <ATTRIBUTE NAME ="Append if Exists" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Create Target Directory" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Header Options" VALUE ="Output Field Names"/>
+                <ATTRIBUTE NAME ="Header Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Footer Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output Type" VALUE ="File"/>
+                <ATTRIBUTE NAME ="Merge Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Output filename" VALUE ="session_statistics1.out"/>
+                <ATTRIBUTE NAME ="Reject file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Reject filename" VALUE ="session_statistics1.bad"/>
+                <ATTRIBUTE NAME ="Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Codepage Parameter" VALUE =""/>
+            </SESSIONEXTENSION>
+            <ATTRIBUTE NAME ="General Options" VALUE =""/>
+            <ATTRIBUTE NAME ="Write Backward Compatible Session Log File" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Session Log File Name" VALUE ="s_m_Informatica_Session_Log_SQL_Reader.log"/>
+            <ATTRIBUTE NAME ="Session Log File directory" VALUE ="$PMSessionLogDir&#x5c;"/>
+            <ATTRIBUTE NAME ="Parameter Filename" VALUE =""/>
+            <ATTRIBUTE NAME ="Enable Test Load" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="$Source connection value" VALUE =""/>
+            <ATTRIBUTE NAME ="$Target connection value" VALUE =""/>
+            <ATTRIBUTE NAME ="Treat source rows as" VALUE ="Insert"/>
+            <ATTRIBUTE NAME ="Commit Type" VALUE ="User Defined"/>
+            <ATTRIBUTE NAME ="Commit Interval" VALUE ="10000"/>
+            <ATTRIBUTE NAME ="Commit On End Of File" VALUE ="YES"/>
+            <ATTRIBUTE NAME ="Rollback Transactions on Errors" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+            <ATTRIBUTE NAME ="Java Classpath" VALUE =""/>
+            <ATTRIBUTE NAME ="Performance" VALUE =""/>
+            <ATTRIBUTE NAME ="DTM buffer size" VALUE ="24000000"/>
+            <ATTRIBUTE NAME ="Collect performance data" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Write performance data to repository" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Incremental Aggregation" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Enable high precision" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Session retry on deadlock" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Pushdown Optimization" VALUE ="None"/>
+            <ATTRIBUTE NAME ="Allow Temporary View for Pushdown" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Allow Temporary Sequence for Pushdown" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Allow Pushdown for User Incompatible Connections" VALUE ="NO"/>
+        </SESSION>
+        <SESSION DESCRIPTION ="Session To Read SQL Queries on Session Log XML File" ISVALID ="YES" MAPPINGNAME ="m_Informatica_Session_Log_SQL_Reader" NAME ="s_m_Informatica_Session_Log_SQL_Reader_Unix" REUSABLE ="NO" SORTORDER ="Binary" VERSIONNUMBER ="4">
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="exp_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="exp_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Expression">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="srt_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="srt_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Sorter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="TGT_INFORMATICA_SESSON_LOG_DATA" STAGE ="1" TRANSFORMATIONNAME ="TGT_INFORMATICA_SESSON_LOG_DATA" TRANSFORMATIONTYPE ="Target Definition">
+                <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="flt_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="flt_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Filter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="trns_Informatica_Session_Log_Reader" STAGE ="2" TRANSFORMATIONNAME ="trns_Informatica_Session_Log_Reader" TRANSFORMATIONTYPE ="Transaction Control">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="0" SINSTANCENAME ="Informatica_Session_Log_XSD" STAGE ="0" TRANSFORMATIONNAME ="Informatica_Session_Log_XSD" TRANSFORMATIONTYPE ="Source Definition">
+                <FLATFILE CODEPAGE ="Latin1" CONSECDELIMITERSASONE ="NO" DELIMITED ="NO" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="XMLDSQ_Informatica_Session_Log_XSD" STAGE ="2" TRANSFORMATIONNAME ="XMLDSQ_Informatica_Session_Log_XSD" TRANSFORMATIONTYPE ="XML Source Qualifier"/>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="YES" PARTITIONTYPE ="PASS THROUGH" PIPELINE ="1" SINSTANCENAME ="Session_Statistics" STAGE ="3" TRANSFORMATIONNAME ="Session_Statistics" TRANSFORMATIONTYPE ="Target Definition">
+                <FLATFILE CODEPAGE ="MS1252" CONSECDELIMITERSASONE ="NO" DELIMITED ="YES" DELIMITERS ="," ESCAPE_CHARACTER ="" KEEPESCAPECHAR ="NO" LINESEQUENTIAL ="NO" MULTIDELIMITERSASAND ="NO" NULLCHARTYPE ="ASCII" NULL_CHARACTER ="*" PADBYTES ="1" QUOTE_CHARACTER ="NONE" REPEATABLE ="NO" ROWDELIMITER ="0" SKIPROWS ="0" STRIPTRAILINGBLANKS ="NO"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="exp_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="exp_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Expression">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="flt_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="flt_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Filter">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <SESSTRANSFORMATIONINST ISREPARTITIONPOINT ="NO" PIPELINE ="1" SINSTANCENAME ="trns_Informatica_Session_Log_Stats_Reader" STAGE ="2" TRANSFORMATIONNAME ="trns_Informatica_Session_Log_Stats_Reader" TRANSFORMATIONTYPE ="Transaction Control">
+                <PARTITION DESCRIPTION ="" NAME ="Partition #1"/>
+            </SESSTRANSFORMATIONINST>
+            <CONFIGREFERENCE REFOBJECTNAME ="default_session_config" TYPE ="Session config">
+                <ATTRIBUTE NAME ="Custom Properties" VALUE ="RemoveOutputHeaderHash=Yes;"/>
+            </CONFIGREFERENCE>
+            <SESSIONCOMPONENT REFOBJECTNAME ="pre_session_command" REUSABLE ="NO" TYPE ="Pre-session command">
+                <TASK DESCRIPTION ="" NAME ="pre_session_command" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="4">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="YES"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                    <VALUEPAIR EXECORDER ="1" NAME ="Removing Non Anscii Characters" REVERSEASSIGNMENT ="NO" VALUE ="cd $$Infa_Path;perl -pi -e &apos;s/[^[:ascii:]]//g&apos; *.xml"/>
+                    <VALUEPAIR EXECORDER ="2" NAME ="Generate_Src_File" REVERSEASSIGNMENT ="NO" VALUE ="cd $$Infa_Path;ls *.xml&gt;Infa_Session_Log_Files.txt"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="post_session_success_command" REUSABLE ="NO" TYPE ="Post-session success command">
+                <TASK DESCRIPTION ="" NAME ="post_session_success_command" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="4">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="YES"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                    <VALUEPAIR EXECORDER ="1" NAME ="Rename XML Files" REVERSEASSIGNMENT ="NO" VALUE ="cd $$Infa_Path;find -name tgt_informatica_sesson_log_data.bad -delete;find -name session_statistics1.bad -delete;find -name session_statistics1.out -delete;find -name tgt_informatica_sesson_log_data.out -delete;find -name Infa_Session_Log_Files.txt -delete;for f in *.xml;do mv -- &quot;$f&quot; &quot;${f%.xml}.xml_done&quot;;done;"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="presession_variable_assignment" REUSABLE ="NO" TYPE ="Pre-session variable assignment">
+                <TASK DESCRIPTION ="" NAME ="presession_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="4">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="postsession_success_variable_assignment" REUSABLE ="NO" TYPE ="Post-session success variable assignment">
+                <TASK DESCRIPTION ="" NAME ="postsession_success_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="4">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONCOMPONENT REFOBJECTNAME ="postsession_failure_variable_assignment" REUSABLE ="NO" TYPE ="Post-session failure variable assignment">
+                <TASK DESCRIPTION ="" NAME ="postsession_failure_variable_assignment" REUSABLE ="NO" TYPE ="Command" VERSIONNUMBER ="4">
+                    <ATTRIBUTE NAME ="Fail task if any command fails" VALUE ="NO"/>
+                    <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+                </TASK>
+            </SESSIONCOMPONENT>
+            <SESSIONEXTENSION NAME ="File Writer" SINSTANCENAME ="TGT_INFORMATICA_SESSON_LOG_DATA" SUBTYPE ="File Writer" TRANSFORMATIONTYPE ="Target Definition" TYPE ="WRITER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Merge Type" VALUE ="No Merge"/>
+                <ATTRIBUTE NAME ="Merge File Directory" VALUE ="$PMTargetFileDir&#x5c;"/>
+                <ATTRIBUTE NAME ="Merge File Name" VALUE ="tgt_informatica_sesson_log_data1.out"/>
+                <ATTRIBUTE NAME ="Append if Exists" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Create Target Directory" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Header Options" VALUE ="No Header"/>
+                <ATTRIBUTE NAME ="Header Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Footer Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output Type" VALUE ="File"/>
+                <ATTRIBUTE NAME ="Merge Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Output filename" VALUE ="tgt_informatica_sesson_log_data.out"/>
+                <ATTRIBUTE NAME ="Reject file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Reject filename" VALUE ="tgt_informatica_sesson_log_data.bad"/>
+                <ATTRIBUTE NAME ="Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Codepage Parameter" VALUE =""/>
+            </SESSIONEXTENSION>
+            <SESSIONEXTENSION DSQINSTNAME ="XMLDSQ_Informatica_Session_Log_XSD" DSQINSTTYPE ="XML Source Qualifier" NAME ="XML Reader" SINSTANCENAME ="Informatica_Session_Log_XSD" SUBTYPE ="XML Reader" TRANSFORMATIONTYPE ="Source Definition" TYPE ="READER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Treat empty content as NULL" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Source file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Source filename" VALUE ="Infa_Session_Log_Files.txt"/>
+                <ATTRIBUTE NAME ="Source filetype" VALUE ="Indirect"/>
+            </SESSIONEXTENSION>
+            <SESSIONEXTENSION NAME ="XML Reader" SINSTANCENAME ="XMLDSQ_Informatica_Session_Log_XSD" SUBTYPE ="XML Reader" TRANSFORMATIONTYPE ="XML Source Qualifier" TYPE ="READER"/>
+            <SESSIONEXTENSION NAME ="File Writer" SINSTANCENAME ="Session_Statistics" SUBTYPE ="File Writer" TRANSFORMATIONTYPE ="Target Definition" TYPE ="WRITER">
+                <CONNECTIONREFERENCE CNXREFNAME ="Connection" CONNECTIONNAME ="" CONNECTIONNUMBER ="1" CONNECTIONSUBTYPE ="" CONNECTIONTYPE ="" VARIABLE =""/>
+                <ATTRIBUTE NAME ="Merge Type" VALUE ="No Merge"/>
+                <ATTRIBUTE NAME ="Merge File Directory" VALUE ="$PMTargetFileDir&#x5c;"/>
+                <ATTRIBUTE NAME ="Merge File Name" VALUE ="session_statistics.out"/>
+                <ATTRIBUTE NAME ="Append if Exists" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Create Target Directory" VALUE ="NO"/>
+                <ATTRIBUTE NAME ="Header Options" VALUE ="Output Field Names"/>
+                <ATTRIBUTE NAME ="Header Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Footer Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output Type" VALUE ="File"/>
+                <ATTRIBUTE NAME ="Merge Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Output file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Output filename" VALUE ="session_statistics1.out"/>
+                <ATTRIBUTE NAME ="Reject file directory" VALUE ="$$Infa_Path"/>
+                <ATTRIBUTE NAME ="Reject filename" VALUE ="session_statistics1.bad"/>
+                <ATTRIBUTE NAME ="Command" VALUE =""/>
+                <ATTRIBUTE NAME ="Codepage Parameter" VALUE =""/>
+            </SESSIONEXTENSION>
+            <ATTRIBUTE NAME ="General Options" VALUE =""/>
+            <ATTRIBUTE NAME ="Write Backward Compatible Session Log File" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Session Log File Name" VALUE ="s_m_Informatica_Session_Log_SQL_Reader.log"/>
+            <ATTRIBUTE NAME ="Session Log File directory" VALUE ="$PMSessionLogDir&#x5c;"/>
+            <ATTRIBUTE NAME ="Parameter Filename" VALUE =""/>
+           <ATTRIBUTE NAME ="Enable Test Load" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="$Source connection value" VALUE =""/>
+            <ATTRIBUTE NAME ="$Target connection value" VALUE =""/>
+            <ATTRIBUTE NAME ="Treat source rows as" VALUE ="Insert"/>
+            <ATTRIBUTE NAME ="Commit Type" VALUE ="User Defined"/>
+            <ATTRIBUTE NAME ="Commit Interval" VALUE ="10000"/>
+            <ATTRIBUTE NAME ="Commit On End Of File" VALUE ="YES"/>
+            <ATTRIBUTE NAME ="Rollback Transactions on Errors" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Recovery Strategy" VALUE ="Fail task and continue workflow"/>
+            <ATTRIBUTE NAME ="Java Classpath" VALUE =""/>
+            <ATTRIBUTE NAME ="Performance" VALUE =""/>
+            <ATTRIBUTE NAME ="DTM buffer size" VALUE ="24000000"/>
+            <ATTRIBUTE NAME ="Collect performance data" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Write performance data to repository" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Incremental Aggregation" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Enable high precision" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Session retry on deadlock" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Pushdown Optimization" VALUE ="None"/>
+            <ATTRIBUTE NAME ="Allow Temporary View for Pushdown" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Allow Temporary Sequence for Pushdown" VALUE ="NO"/>
+            <ATTRIBUTE NAME ="Allow Pushdown for User Incompatible Connections" VALUE ="NO"/>
+        </SESSION>
+        <TASKINSTANCE DESCRIPTION ="Session To Read SQL Queries on Session Log XML File" FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN ="NO" FAIL_PARENT_IF_INSTANCE_FAILS ="YES" ISENABLED ="YES" NAME ="s_m_Informatica_Session_Log_SQL_Reader_Windows" REUSABLE ="NO" TASKNAME ="s_m_Informatica_Session_Log_SQL_Reader_Windows" TASKTYPE ="Session" TREAT_INPUTLINK_AS_AND ="YES"/>
+        <TASKINSTANCE DESCRIPTION ="" ISENABLED ="YES" NAME ="Start" REUSABLE ="NO" TASKNAME ="Start" TASKTYPE ="Start"/>
+        <TASKINSTANCE DESCRIPTION ="Session To Read SQL Queries on Session Log XML File" FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN ="NO" FAIL_PARENT_IF_INSTANCE_FAILS ="YES" ISENABLED ="YES" NAME ="s_m_Informatica_Session_Log_SQL_Reader_Unix" REUSABLE ="NO" TASKNAME ="s_m_Informatica_Session_Log_SQL_Reader_Unix" TASKTYPE ="Session" TREAT_INPUTLINK_AS_AND ="YES"/>
+        <WORKFLOWLINK CONDITION ="INSTR($$Infa_Path,&apos;&#x5c;&apos;)&gt;0" FROMTASK ="Start" TOTASK ="s_m_Informatica_Session_Log_SQL_Reader_Windows"/>
+        <WORKFLOWLINK CONDITION ="INSTR($$Infa_Path,&apos;/&apos;)&gt;0" FROMTASK ="Start" TOTASK ="s_m_Informatica_Session_Log_SQL_Reader_Unix"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task started" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.StartTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task completed" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.EndTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.Status" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of the previous task that is not disabled" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.PrevTaskStatus" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Error code for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.ErrorCode" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="Error message for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.ErrorMsg" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows successfully read" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.SrcSuccessRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows failed to read" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.SrcFailedRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows successfully loaded" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.TgtSuccessRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows failed to load" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.TgtFailedRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Total number of transformation errors" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.TotalTransErrors" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="First error code" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.FirstErrorCode" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="First error message" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Windows.FirstErrorMsg" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task started" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.StartTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task completed" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.EndTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.Status" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of the previous task that is not disabled" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.PrevTaskStatus" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Error code for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.ErrorCode" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="Error message for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$Start.ErrorMsg" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task started" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.StartTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="date/time" DEFAULTVALUE ="" DESCRIPTION ="The time this task completed" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.EndTime" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.Status" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Status of the previous task that is not disabled" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.PrevTaskStatus" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Error code for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.ErrorCode" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="Error message for this task&apos;s execution" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.ErrorMsg" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows successfully read" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.SrcSuccessRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows failed to read" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.SrcFailedRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows successfully loaded" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.TgtSuccessRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Rows failed to load" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.TgtFailedRows" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="Total number of transformation errors" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.TotalTransErrors" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="integer" DEFAULTVALUE ="" DESCRIPTION ="First error code" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.FirstErrorCode" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="string" DEFAULTVALUE ="" DESCRIPTION ="First error message" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$s_m_Informatica_Session_Log_SQL_Reader_Unix.FirstErrorMsg" USERDEFINED ="NO"/>
+        <WORKFLOWVARIABLE DATATYPE ="nstring" DEFAULTVALUE ="/nfs/saetl/data/src_files/Output_Mgmt/BINDER_PAYMT_Letters" DESCRIPTION ="Holding Infa Path" ISNULL ="NO" ISPERSISTENT ="NO" NAME ="$$Infa_Path" USERDEFINED ="YES"/>
+        <ATTRIBUTE NAME ="Parameter Filename" VALUE =""/>
+        <ATTRIBUTE NAME ="Write Backward Compatible Workflow Log File" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Workflow Log File Name" VALUE ="wf_Informatica_Session_Log_Reader.log"/>
+        <ATTRIBUTE NAME ="Workflow Log File Directory" VALUE ="$PMWorkflowLogDir&#x5c;"/>
+        <ATTRIBUTE NAME ="Save Workflow log by" VALUE ="By runs"/>
+        <ATTRIBUTE NAME ="Save workflow log for these runs" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Service Name" VALUE =""/>
+        <ATTRIBUTE NAME ="Service Timeout" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Is Service Visible" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Is Service Protected" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Fail task after wait time" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Enable HA recovery" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Automatically recover terminated tasks" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Service Level Name" VALUE ="Default"/>
+        <ATTRIBUTE NAME ="Allow concurrent run with unique run instance name" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Allow concurrent run with same run instance name" VALUE ="NO"/>
+        <ATTRIBUTE NAME ="Maximum number of concurrent runs" VALUE ="0"/>
+        <ATTRIBUTE NAME ="Assigned Web Services Hubs" VALUE =""/>
+        <ATTRIBUTE NAME ="Maximum number of concurrent runs per Hub" VALUE ="1000"/>
+        <ATTRIBUTE NAME ="Expected Service Time" VALUE ="1"/>
+    </WORKFLOW>
+</FOLDER>
+</REPOSITORY>
+</POWERMART>
